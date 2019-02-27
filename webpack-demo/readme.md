@@ -9,8 +9,12 @@ run the follows commands
 ```
 npm init -y
 npm install webpack webpack-cli --save-dev
-npm install --save lodash
-npm install --save-dev html-webpack-plugin
+npm install lodash --save
+npm install html-webpack-plugin  --save-dev
+npm install css-loader --save-dev
+npm install style-loader --save-dev
+npm install sass-loader node-sass webpack --save-dev
+npm install --save-dev extract-text-webpack-plugin
 ```
 
 ## command line
