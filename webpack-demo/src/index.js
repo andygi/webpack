@@ -1,5 +1,5 @@
 
-const css = require('./style.css');
+const css = require('./style.scss');
 
 import _ from 'lodash';
 
