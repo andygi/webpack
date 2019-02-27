@@ -14,7 +14,7 @@ npm install html-webpack-plugin  --save-dev
 npm install css-loader --save-dev
 npm install style-loader --save-dev
 npm install sass-loader node-sass webpack --save-dev
-npm install --save-dev extract-text-webpack-plugin
+npm install --save-dev mini-css-extract-plugin
 ```
 
 ## command line
