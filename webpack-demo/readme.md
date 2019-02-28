@@ -2,7 +2,15 @@
 
 From: [get started](https://webpack.js.org/guides/getting-started/)
 
-##installa##
+##description##
+
+this repo generate a webpack able to:
+- generate html with hash
+- use sass as external file
+- minify css file
+- convert ES6 to ES5
+
+##install##
 
 run the follows commands
 
