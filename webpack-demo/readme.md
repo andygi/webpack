@@ -1,8 +1,8 @@
-#documentation#
+# documentation
 
 From: [get started](https://webpack.js.org/guides/getting-started/)
 
-##description##
+## description
 
 this repo generate a webpack able to:
 - generate html with hash
@@ -10,7 +10,7 @@ this repo generate a webpack able to:
 - minify css file
 - convert ES6 to ES5
 
-##install##
+## install
 
 run the follows commands
 
