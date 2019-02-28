@@ -10,6 +10,7 @@ this repo generate a webpack able to:
 - use sass as external file
 - minify css file
 - convert ES6 to ES5
+- use DevServe to preview the page
 
 ## install
 
