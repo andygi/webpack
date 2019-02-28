@@ -14,10 +14,10 @@ npm install html-webpack-plugin  --save-dev
 npm install css-loader --save-dev
 npm install style-loader --save-dev
 npm install sass-loader node-sass webpack --save-dev
-npm install --save-dev mini-css-extract-plugin
-npm install uglifyjs-webpack-plugin --save-
-npm install --save-dev optimize-css-assets-webpack-plugin
-
+# add as external file
+npm install mini-css-extract-plugin --save-dev
+npm install uglifyjs-webpack-plugin --save-dev
+npm install optimize-css-assets-webpack-plugin --save-dev
 # to convert ES6 to ES5
 npm install -D babel-loader @babel/core @babel/preset-env webpack
 ```
