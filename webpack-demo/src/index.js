@@ -1,13 +1,14 @@
-const css = require('./style.scss');
+// const css = require('./style.scss');
 
-import _ from 'lodash';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 
-function component() {
-    let element = document.createElement('div');
+// ReactDOM.render(
+//     <h1>Hello!</h1>,
+//     document.getElementById('root')
+// );
 
-    element.innerHTML = _.join(['Hello', 'webpack', 'with sass, babel and devserver'], ' ');
-
-    return element;
-}
-
-document.body.appendChild(component());
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App.js";
+ReactDOM.render(<App />, document.getElementById("root"));

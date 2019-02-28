@@ -4,6 +4,10 @@ From: [get started](https://webpack.js.org/guides/getting-started/)
 
 DevServer: [get started](https://webpack.js.org/configuration/dev-server/)
 
+React From Scratch:
+- [from medium](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658)
+- [youtube | Webpack 2 - How to install React and Babel](https://www.youtube.com/watch?v=zhA5LNA3MxE&feature=youtu.be)
+
 ## description
 
 this repo generate a webpack able to:
@@ -12,6 +16,8 @@ this repo generate a webpack able to:
 - minify css file
 - convert ES6 to ES5
 - use DevServe to preview the page
+
+we install React From Scratch
 
 ## install
 
@@ -33,6 +39,11 @@ npm install optimize-css-assets-webpack-plugin --save-dev
 npm install -D babel-loader @babel/core @babel/preset-env webpack
 # DevServer
 npm install webpack-dev-server --save-dev
+```
+
+React
+```
+npm i -D react react-dom
 ```
 
 ## command line
