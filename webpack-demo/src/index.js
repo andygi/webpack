@@ -5,7 +5,7 @@ import _ from 'lodash';
 function component() {
     let element = document.createElement('div');
 
-    element.innerHTML = _.join(['Hello', 'webpack', 'with sass and babel'], ' ');
+    element.innerHTML = _.join(['Hello', 'webpack', 'with sass, babel and devserver'], ' ');
 
     return element;
 }

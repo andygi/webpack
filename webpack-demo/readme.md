@@ -1,6 +1,7 @@
 # documentation
 
 From: [get started](https://webpack.js.org/guides/getting-started/)
+DevServer: [get starte](https://webpack.js.org/configuration/dev-server/)
 
 ## description
 
@@ -28,6 +29,8 @@ npm install uglifyjs-webpack-plugin --save-dev
 npm install optimize-css-assets-webpack-plugin --save-dev
 # to convert ES6 to ES5
 npm install -D babel-loader @babel/core @babel/preset-env webpack
+# DevServer
+npm install webpack-dev-server --save-dev
 ```
 
 ## command line
@@ -36,10 +39,13 @@ npm install -D babel-loader @babel/core @babel/preset-env webpack
 `npm run build`
 
 ### production
-`webpack-cli -p`
+`webpack-cli -p` or `npm run prod`
 
 ### develop
 `webpack-cli -d`
+
+### Dev Server
+`npm run dev`
 
 ### develop + watch
 `webpack-cli -d --watch`
