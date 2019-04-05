@@ -16,12 +16,19 @@ this repo generate a webpack able to:
 - minify css file
 - convert ES6 to ES5
 - use DevServe to preview the page
+- start use react
 
 we install React From Scratch
 
 ## install
 
-run the follows commands
+if you have `package.json`
+
+run `yarn`
+
+in case you need install yarn: `npm i yarn`
+
+otherwise run the follows commands
 
 ```
 npm init -y
@@ -43,7 +50,8 @@ npm install webpack-dev-server --save-dev
 
 React
 ```
-npm i -D react react-dom
+npm install @babel/preset-react
+npm install --save react react-dom
 ```
 
 ## command line
