@@ -2,10 +2,15 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+require('bootstrap-loader');
 
 const path = require('path');
 
 module.exports = {
+    entry: [
+        'bootstrap-loader',
+        './src/index.js'
+    ],
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
@@ -17,7 +22,6 @@ module.exports = {
         ]
     },
     mode: 'development',
-    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'index_bundle.js'

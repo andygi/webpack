@@ -22,12 +22,14 @@ we install React From Scratch
 
 ## install
 
+### with yarn
 if you have `package.json`
 
 run `yarn`
 
 in case you need install yarn: `npm i yarn`
 
+### step by step
 otherwise run the follows commands
 
 ```
@@ -52,6 +54,19 @@ React
 ```
 npm install @babel/preset-react
 npm install --save react react-dom
+```
+
+Bootstrap 4 [here](https://github.com/shakacode/bootstrap-loader)
+```
+npm install bootstrap-loader
+npm install resolve-url-loader@*
+npm install url-loader@*
+# v4
+npm install --save-dev bootstrap
+npm install jquery@3.3.1
+npm install popper.js@^1.14.7
+npm install --save-dev imports-loader exports-loader
+npm install --save-dev postcss-loader
 ```
 
 ## command line
