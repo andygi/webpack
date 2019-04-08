@@ -2,7 +2,6 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-require('bootstrap-loader');
 
 const path = require('path');
 
@@ -63,7 +62,11 @@ module.exports = {
                     "css-loader",
                     "sass-loader"
                 ]
-            }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            } 
         ]
     },
     devServer: {

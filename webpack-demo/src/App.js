@@ -13,11 +13,30 @@ export class App extends React.Component {
         return (
             <div>
                 <h1>Shopping list</h1>
-                {
-                    buyItems.map(item => {
-                        return <p key={item}>{item}</p>
-                    })
-                }
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            buyItems.map(item => {
+                                return (
+                                    <tr>
+                                        <th scope="row" key={item}></th>
+                                        <td>{item}</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
             </div>
         )
     }
