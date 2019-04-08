@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "prod": "webpack-cli -p"
+    "prod": "npm run clean && webpack-cli -p",
+    "clean": "rimraf ./dist/*"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "rimraf": "^2.6.3"
   }
 }
