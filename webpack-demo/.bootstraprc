@@ -7,7 +7,6 @@ bootstrapVersion: 4
 
 # Webpack loaders, order matters
 styleLoaders:
-  - style-loader
   - css-loader
   - sass-loader
 
@@ -16,12 +15,12 @@ styleLoaders:
 # It depends on value of NODE_ENV environment variable
 # This param can also be set in webpack config:
 #   entry: 'bootstrap-loader/extractStyles'
-extractStyles: false
-env:
-  development:
-    extractStyles: false
-  production:
-    extractStyles: true
+extractStyles: true
+# env:
+#   development:
+#     extractStyles: false
+#   production:
+#     extractStyles: true
 
 
 # Customize Bootstrap variables that get imported before the original Bootstrap variables.
@@ -35,7 +34,7 @@ env:
 # Thus, you may customize Bootstrap variables
 # based on the values established in the Bootstrap _variables.scss file
 #
-# bootstrapCustomizations: ./path/to/bootstrap/customizations.scss
+bootstrapCustomizations: ./src/bootstrap/customizations.scss
 
 
 # Import your custom styles here
@@ -92,15 +91,4 @@ styles:
   utilities: true
 
 ### Bootstrap scripts
-scripts:
-  alert: true
-  button: true
-  carousel: true
-  collapse: true
-  dropdown: true
-  modal: true
-  popover: true
-  scrollspy: true
-  tab: true
-  tooltip: true
-  util: true
+scripts: true

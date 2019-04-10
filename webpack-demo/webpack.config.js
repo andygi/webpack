@@ -88,21 +88,18 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
-                        }
-                    },
-                    "css-loader",
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader?modules&importLoaders=2&localIdentName=[name]__[local]__[hash:base64:5]',
                     "sass-loader"
                 ]
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+                ]
             },
             { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000&name=fonts/[name].[ext]' },
             { test: /\.(ttf|eot)$/, loader: 'file-loader?&name=fonts/[name].[ext]' },
