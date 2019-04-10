@@ -6,5 +6,8 @@ First step of react for scratch (iHateTomato [video tutorial](https://www.youtub
 ## Step two
 - add clean directory command
 
+## external file
+- add plugin in order to externalize all files (css, js, img)
+
 ## Add Bootstrap
 - follow video [tutorial](https://www.youtube.com/watch?v=cN0eUhoV_Gc) and [doc](https://github.com/shakacode/bootstrap-loader)

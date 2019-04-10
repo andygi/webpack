@@ -40,12 +40,18 @@ npm install html-webpack-plugin  --save-dev
 npm install css-loader --save-dev
 npm install style-loader --save-dev
 npm install sass-loader node-sass webpack --save-dev
+
 # add as external file
 npm install mini-css-extract-plugin --save-dev
 npm install uglifyjs-webpack-plugin --save-dev
 npm install optimize-css-assets-webpack-plugin --save-dev
+
+# image file optimizer
+npm install image-webpack-loader --save-dev
+
 # to convert ES6 to ES5
 npm install -D babel-loader @babel/core @babel/preset-env webpack
+
 # DevServer
 npm install webpack-dev-server --save-dev
 ```
@@ -56,13 +62,12 @@ npm install @babel/preset-react
 npm install --save react react-dom
 ```
 
-npm install image-webpack-loader --save-dev
-
 Bootstrap 4 [here](https://github.com/shakacode/bootstrap-loader)
 ```
 npm install bootstrap-loader
 npm install resolve-url-loader@*
 npm install url-loader@*
+
 # v4
 npm install --save-dev bootstrap
 npm install jquery@3.3.1
