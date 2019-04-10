@@ -26,6 +26,11 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: './js/[name].js'
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'this is the title',
@@ -39,7 +44,7 @@ module.exports = {
             // Options similar to the same options in webpackOptions.output
             // both options are optional
             filename: "css/[name].css",
-            chunkFilename: "[id].css"
+            chunkFilename: "css/[name]_[hash:6].css"
         }),
         // for bootstrap 4
         new webpack.ProvidePlugin({
@@ -73,7 +78,14 @@ module.exports = {
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
-                    'file-loader?name=[name]_[hash:6].[ext]&outputPath=img/',
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name]_[hash:6].[ext]',
+                            outputPath: './img/',
+                            publicPath: '../img/'
+                        }
+                    },
                     {
                         loader: 'image-webpack-loader',
                         options: {
