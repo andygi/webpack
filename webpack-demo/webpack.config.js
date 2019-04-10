@@ -24,7 +24,7 @@ module.exports = {
     mode: 'development',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].js'
+        filename: './js/[name].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -38,7 +38,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            filename: "[name].css",
+            filename: "css/[name].css",
             chunkFilename: "[id].css"
         }),
         // for bootstrap 4
@@ -71,6 +71,18 @@ module.exports = {
                 options: { presets: ["@babel/env"] }
             },
             {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader?name=[name]_[hash:6].[ext]&outputPath=img/',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            disable: false, // webpack@2.x and newer
+                        },
+                    },
+                ],
+            },
+            {
                 test: /\.scss$/,
                 use: [{
                         loader: MiniCssExtractPlugin.loader,
@@ -88,8 +100,8 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             },
-            { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000' },
-            { test: /\.(ttf|eot)$/, loader: 'file-loader' },
+            { test: /\.(woff2?|svg)$/, loader: 'url-loader?limit=10000&name=fonts/[name].[ext]' },
+            { test: /\.(ttf|eot)$/, loader: 'file-loader?&name=fonts/[name].[ext]' },
             { test: /bootstrap[\/\\]dist[\/\\]js[\/\\]umd[\/\\]/, loader: 'imports-loader?jQuery=jquery' }
         ]
     },

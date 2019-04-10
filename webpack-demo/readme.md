@@ -56,6 +56,8 @@ npm install @babel/preset-react
 npm install --save react react-dom
 ```
 
+npm install image-webpack-loader --save-dev
+
 Bootstrap 4 [here](https://github.com/shakacode/bootstrap-loader)
 ```
 npm install bootstrap-loader
