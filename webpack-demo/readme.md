@@ -74,6 +74,10 @@ npm install jquery@3.3.1
 npm install popper.js@^1.14.7
 npm install --save-dev imports-loader exports-loader
 npm install --save-dev postcss-loader
+
+# optimization
+npm i -D purify-css
+npm install -D purifycss-webpack
 ```
 
 ## command line

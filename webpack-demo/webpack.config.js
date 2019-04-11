@@ -2,9 +2,12 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 const webpack = require('webpack');
 const path = require('path');
+const appConfig = require('./app.config');
 
 module.exports = {
     entry: [
@@ -19,21 +22,19 @@ module.exports = {
                 sourceMap: true // set to true if you want JS source maps
             }),
             new OptimizeCSSAssetsPlugin({})
-        ]
+        ],
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     mode: 'development',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: './js/[name].js'
     },
-    optimization: {
-        splitChunks: {
-            chunks: 'all'
-        }
-    },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'this is the title',
+            title: appConfig.pageTitle,
             minify: {
                 collapseWhitespace: true
             },
@@ -65,6 +66,11 @@ module.exports = {
             Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
             Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
             Util: "exports-loader?Util!bootstrap/js/dist/util",
+        }),
+        // Make sure this is after ExtractTextPlugin!
+        new PurifyCSSPlugin({
+            // Give paths to parse for rules. These should be absolute!
+            paths: glob.sync(path.join(__dirname, 'src/*.html'))
         })
     ],
     module: {
