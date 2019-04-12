@@ -2,7 +2,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const glob = require('glob');
+const glob = require('glob-all');
 const PurifyCSSPlugin = require('purifycss-webpack');
 
 const webpack = require('webpack');
@@ -70,7 +70,10 @@ module.exports = {
         // Make sure this is after ExtractTextPlugin!
         new PurifyCSSPlugin({
             // Give paths to parse for rules. These should be absolute!
-            paths: glob.sync(path.join(__dirname, 'src/*.html'))
+            paths: glob.sync([
+                path.join(__dirname, 'src/*.html'),
+                path.join(__dirname, 'src/App.js')
+            ]),
         })
     ],
     module: {

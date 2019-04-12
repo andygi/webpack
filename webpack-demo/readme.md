@@ -78,6 +78,15 @@ npm install --save-dev postcss-loader
 # optimization
 npm i -D purify-css
 npm install -D purifycss-webpack
+# In order to use this plugin to look into multiple paths you will need to:
+npm install --save glob-all
+```
+
+Font Awesome for React [here](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+```
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/react-fontawesome
 ```
 
 ## command line
