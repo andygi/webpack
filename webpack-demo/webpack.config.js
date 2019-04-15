@@ -12,7 +12,7 @@ const appConfig = require('./app.config');
 module.exports = {
     entry: [
         'bootstrap-loader',
-        './src/index.js'
+        './src/js/index.js'
     ],
     optimization: {
         minimizer: [
@@ -72,7 +72,7 @@ module.exports = {
             // Give paths to parse for rules. These should be absolute!
             paths: glob.sync([
                 path.join(__dirname, 'src/*.html'),
-                path.join(__dirname, 'src/App.js')
+                path.join(__dirname, 'src/js/*.js')
             ]),
         })
     ],
